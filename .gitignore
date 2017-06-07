@@ -1,0 +1,13 @@
+.DS_Store
+.ipynb_checkpoints
+
+__pycache__
+
+/data
+/data2
+/venv
+
+NOTES
+
+fetch-tweets.py
+secrets
