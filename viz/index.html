@@ -1,100 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TODO</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>United States of Emoji</title>
     <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-    }
-
-    svg {
-      border: 1px solid #eee;
-      border-radius: 3px;
-    }
-
-    .state rect {
-      fill: #dedede;
-    }
-
-    .state text {
-      font-size: 12px;
-      font-family: "Gill Sans";
-      text-anchor: middle;
-    }
-
-    .state .txt-sm {
-      font-size: 10px;
-    }
-
-    .state--selected rect {
-      fill: #0084ff;
-    }
-
-    .state--selected text {
-      fill: white;
-    }
+    body { margin: 0; padding: 16px; text-align: center; }
+    svg { box-sizing: border-box; }
+    .state rect { fill: none; }
+    .state text { font-size: 10px; font-family: 'Gill Sans'; }
     </style>
   </head>
-  <body class="center">
-    <div id="viz"></div>
-    <script src="//d3js.org/d3.v3.min.js"></script>
+  <body>
+    <div id='viz'></div>
+    <script src='//d3js.org/d3.v4.min.js'></script>
     <script>
-    var mapWidth = 12,
-        mapHeight = 8,
-        cellSize = 55,
-        margin = 4;
+    const mapWidth = 12
+    const mapHeight = 8
+    const cellSize = 50
+    const margin = 10
+    const imgCushion = 10
+    const metric = 'tfidf'
 
-    var width = mapWidth * cellSize + margin,
-        height = mapHeight * cellSize + margin;
+    const width = mapWidth * cellSize + margin
+    const height = mapHeight * cellSize + margin
 
-    var svg = d3.select("#viz").append("svg")
-        .attr("width", width)
-        .attr("height", height);
+    const svg = d3.select('#viz').append('svg')
+      .attr('width', width)
+      .attr('height', height)
 
-    d3.json("data/map.json", function(error, data) {
-        console.log(data[0])
+    d3.json('../data/state-stats.json', (error, data) => {
+        const stateStats = {}
+        data.forEach(d => {
+          const stats = d.stats
+          stateStats[d.id] = {
+            cts: stats.top_counts.map(d => d[0]),
+            tfidf: stats.top_tfidf.map(d => d[0])
+          }
+        })
 
-        var state = svg.append('g')
-            .attr('class', 'foreground')
-            .attr('transform', 'translate(' + margin / 2 + ',' + margin / 2  + ')')
+        const state = svg.append('g')
+          .attr('transform', `translate(${margin / 2}, ${margin / 2})`)
           .selectAll('.state')
-            .data(data)
+          .data(data)
           .enter().append('g')
-            .attr('class', 'state')
-            .attr('transform', function(d) {
-              return 'translate(' + d.grid.x * cellSize + ',' + (d.grid.y - 1) * cellSize + ')';
-            })
+          .attr('class', 'state')
+          .attr('transform', d => (
+            `translate(${d.grid.x * cellSize}, ${(d.grid.y - 1) * cellSize})`
+          ))
 
         state.append('rect')
-            .attr('width', cellSize - 2)
-            .attr('height', cellSize - 2)
-            .style('fill', 'none');
+          .attr('width', cellSize - 2)
+          .attr('height', cellSize - 2)
 
         state.append('text')
-            .attr('x', cellSize / 2)
-            .attr('y', cellSize / 2)
-            .attr('dy', '.35em')
-            .text(function(d) { return d.name_short; });
+          .attr('class', 'votes')
+          .attr('x', cellSize / 2)
+          .attr('y', cellSize - 4)
+          .style('text-anchor', 'middle')
+          .text(d => d.name_short)
 
-        state.append('text')
-            .attr('class', 'votes')
-            .attr('x', cellSize - 4)
-            .attr('y', cellSize - 5)
-            .text(function(d) { return d.votes; });
-
-        state.append("svg:image")
-           .attr('x', 4)
-           .attr('y', 4)
-           .attr('width', cellSize - 8)
-           .attr('height', cellSize - 8)
-           .attr("xlink:href", function(d) {
-                return `img/${d.emoji.replace(/:/g, '').toLowerCase()}.png`;
-            })
-    });
+        state.append('image')
+         .attr('x', imgCushion)
+         .attr('y', imgCushion - 4)
+         .attr('width', cellSize - (imgCushion * 2))
+         .attr('height', cellSize - (imgCushion * 2))
+         .attr('xlink:href', d => {
+            const emoji = stateStats[d.id][metric][0]
+            return `../img/${emoji.replace(/:/g, '').toLowerCase()}.png`;
+          })
+    })
     </script>
   </body>
 </html>
