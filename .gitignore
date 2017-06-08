@@ -3,8 +3,10 @@
 
 __pycache__
 
-/data
-/data2
+/data/popular-emojis.json
+/data/sample.json
+/data/tweets-w-emojis.json
+
 /venv
 
 NOTES
