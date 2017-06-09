@@ -24,7 +24,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     const stats = d.stats
     stateStats[d.id] = {
       cts: stats.top_counts.map(d => d[0]),
-      tfidf: stats.top_tfidf.map(d => d[0])
+      tfidf: stats.top_tfidf.map(d => d[0]),
     }
   })
 
@@ -38,7 +38,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     .attr('class', 'state')
     .attr(
       'transform',
-      d => `translate(${d.grid.x * cellSize}, ${(d.grid.y - 1) * cellSize})`
+      d => `translate(${d.grid.x * cellSize}, ${d.grid.y * cellSize})`,
     )
 
   state

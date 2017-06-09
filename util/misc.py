@@ -69,7 +69,7 @@ CARTOGRAM = [
         "name_short": "Alaska",
         "grid": {
             "x": 0,
-            "y": 1
+            "y": 0
         }
     },
     {
@@ -78,7 +78,7 @@ CARTOGRAM = [
         "name_short": "Ala.",
         "grid": {
             "x": 7,
-            "y": 7
+            "y": 6
         }
     },
     {
@@ -87,7 +87,7 @@ CARTOGRAM = [
         "name_short": "Ark.",
         "grid": {
             "x": 5,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -96,7 +96,7 @@ CARTOGRAM = [
         "name_short": "Ariz.",
         "grid": {
             "x": 2,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -105,7 +105,7 @@ CARTOGRAM = [
         "name_short": "Calif.",
         "grid": {
             "x": 1,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -114,7 +114,7 @@ CARTOGRAM = [
         "name_short": "Colo.",
         "grid": {
             "x": 3,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -123,7 +123,7 @@ CARTOGRAM = [
         "name_short": "Conn.",
         "grid": {
             "x": 10,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -132,7 +132,7 @@ CARTOGRAM = [
         "name_short": "D.C.",
         "grid": {
             "x": 9,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -141,7 +141,7 @@ CARTOGRAM = [
         "name_short": "Del.",
         "grid": {
             "x": 10,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -150,7 +150,7 @@ CARTOGRAM = [
         "name_short": "Fla.",
         "grid": {
             "x": 9,
-            "y": 8
+            "y": 7
         }
     },
     {
@@ -159,7 +159,7 @@ CARTOGRAM = [
         "name_short": "Ga.",
         "grid": {
             "x": 8,
-            "y": 7
+            "y": 6
         }
     },
     {
@@ -168,7 +168,7 @@ CARTOGRAM = [
         "name_short": "Hawaii",
         "grid": {
             "x": 0,
-            "y": 8
+            "y": 7
         }
     },
     {
@@ -177,7 +177,7 @@ CARTOGRAM = [
         "name_short": "Iowa",
         "grid": {
             "x": 5,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -186,7 +186,7 @@ CARTOGRAM = [
         "name_short": "Idaho",
         "grid": {
             "x": 2,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -195,7 +195,7 @@ CARTOGRAM = [
         "name_short": "Ill.",
         "grid": {
             "x": 6,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -204,7 +204,7 @@ CARTOGRAM = [
         "name_short": "Ind.",
         "grid": {
             "x": 6,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -213,7 +213,7 @@ CARTOGRAM = [
         "name_short": "Kan.",
         "grid": {
             "x": 4,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -222,7 +222,7 @@ CARTOGRAM = [
         "name_short": "Ky.",
         "grid": {
             "x": 6,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -231,7 +231,7 @@ CARTOGRAM = [
         "name_short": "La.",
         "grid": {
             "x": 5,
-            "y": 7
+            "y": 6
         }
     },
     {
@@ -240,7 +240,7 @@ CARTOGRAM = [
         "name_short": "Mass.",
         "grid": {
             "x": 11,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -249,7 +249,7 @@ CARTOGRAM = [
         "name_short": "Md.",
         "grid": {
             "x": 9,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -258,7 +258,7 @@ CARTOGRAM = [
         "name_short": "Maine",
         "grid": {
             "x": 11,
-            "y": 1
+            "y": 0
         }
     },
     {
@@ -267,7 +267,7 @@ CARTOGRAM = [
         "name_short": "Mich.",
         "grid": {
             "x": 8,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -276,7 +276,7 @@ CARTOGRAM = [
         "name_short": "Minn.",
         "grid": {
             "x": 5,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -285,7 +285,7 @@ CARTOGRAM = [
         "name_short": "Mo.",
         "grid": {
             "x": 5,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -294,7 +294,7 @@ CARTOGRAM = [
         "name_short": "Miss.",
         "grid": {
             "x": 6,
-            "y": 7
+            "y": 6
         }
     },
     {
@@ -303,7 +303,7 @@ CARTOGRAM = [
         "name_short": "Mont.",
         "grid": {
             "x": 3,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -312,7 +312,7 @@ CARTOGRAM = [
         "name_short": "N.C.",
         "grid": {
             "x": 7,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -321,7 +321,7 @@ CARTOGRAM = [
         "name_short": "N.D.",
         "grid": {
             "x": 4,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -330,7 +330,7 @@ CARTOGRAM = [
         "name_short": "Neb.",
         "grid": {
             "x": 4,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -339,7 +339,7 @@ CARTOGRAM = [
         "name_short": "N.H.",
         "grid": {
             "x": 11,
-            "y": 2
+            "y": 1
         }
     },
     {
@@ -348,7 +348,7 @@ CARTOGRAM = [
         "name_short": "N.J.",
         "grid": {
             "x": 9,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -357,7 +357,7 @@ CARTOGRAM = [
         "name_short": "N.M.",
         "grid": {
             "x": 3,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -366,7 +366,7 @@ CARTOGRAM = [
         "name_short": "Nev.",
         "grid": {
             "x": 2,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -375,7 +375,7 @@ CARTOGRAM = [
         "name_short": "N.Y.",
         "grid": {
             "x": 9,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -384,7 +384,7 @@ CARTOGRAM = [
         "name_short": "Ohio",
         "grid": {
             "x": 7,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -393,7 +393,7 @@ CARTOGRAM = [
         "name_short": "Okla.",
         "grid": {
             "x": 4,
-            "y": 7
+            "y": 6
         }
     },
     {
@@ -402,7 +402,7 @@ CARTOGRAM = [
         "name_short": "Ore.",
         "grid": {
             "x": 1,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -411,7 +411,7 @@ CARTOGRAM = [
         "name_short": "Penn.",
         "grid": {
             "x": 8,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -420,7 +420,7 @@ CARTOGRAM = [
         "name_short": "R.I.",
         "grid": {
             "x": 10,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -429,7 +429,7 @@ CARTOGRAM = [
         "name_short": "S.C.",
         "grid": {
             "x": 8,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -438,7 +438,7 @@ CARTOGRAM = [
         "name_short": "S.D.",
         "grid": {
             "x": 4,
-            "y": 4
+            "y": 3
         }
     },
     {
@@ -447,7 +447,7 @@ CARTOGRAM = [
         "name_short": "Tenn.",
         "grid": {
             "x": 6,
-            "y": 6
+            "y": 5
         }
     },
     {
@@ -456,7 +456,7 @@ CARTOGRAM = [
         "name_short": "Texas",
         "grid": {
             "x": 4,
-            "y": 8
+            "y": 7
         }
     },
     {
@@ -465,7 +465,7 @@ CARTOGRAM = [
         "name_short": "Utah",
         "grid": {
             "x": 2,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -474,7 +474,7 @@ CARTOGRAM = [
         "name_short": "Va.",
         "grid": {
             "x": 8,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -483,7 +483,7 @@ CARTOGRAM = [
         "name_short": "Vt.",
         "grid": {
             "x": 10,
-            "y": 2
+            "y": 1
         }
     },
     {
@@ -492,7 +492,7 @@ CARTOGRAM = [
         "name_short": "Wash.",
         "grid": {
             "x": 1,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -501,7 +501,7 @@ CARTOGRAM = [
         "name_short": "Wis.",
         "grid": {
             "x": 7,
-            "y": 3
+            "y": 2
         }
     },
     {
@@ -510,7 +510,7 @@ CARTOGRAM = [
         "name_short": "W.Va.",
         "grid": {
             "x": 7,
-            "y": 5
+            "y": 4
         }
     },
     {
@@ -519,7 +519,7 @@ CARTOGRAM = [
         "name_short": "Wyo.",
         "grid": {
             "x": 3,
-            "y": 4
+            "y": 3
         }
     }
 ]

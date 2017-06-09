@@ -25,7 +25,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     const stats = d.stats
     stateStats[d.id] = {
       cts: stats.top_counts.map(d => d[0]),
-      tfidf: stats.top_tfidf.map(d => d[0])
+      tfidf: stats.top_tfidf.map(d => d[0]),
     }
   })
 
@@ -39,7 +39,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     .attr('class', 'state')
     .attr(
       'transform',
-      d => `translate(${d.grid.x * cellSize}, ${(d.grid.y - 1) * cellSize})`
+      d => `translate(${d.grid.x * cellSize}, ${d.grid.y * cellSize})`,
     )
 
   state
@@ -62,7 +62,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     .attr(
       'transform',
       (_, i) =>
-        `translate(${i % 2 === 0 ? 0 : imgSize}, ${i < 2 ? 0 : imgSize})`
+        `translate(${i % 2 === 0 ? 0 : imgSize}, ${i < 2 ? 0 : imgSize})`,
     )
 
   emoji
@@ -73,6 +73,6 @@ d3.json('../../data/state-stats.json', (error, data) => {
     .attr('height', imgInner)
     .attr(
       'xlink:href',
-      d => `../../img/${d.replace(/:/g, '').toLowerCase()}.png`
+      d => `../../img/${d.replace(/:/g, '').toLowerCase()}.png`,
     )
 })
