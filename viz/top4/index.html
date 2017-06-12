@@ -4,15 +4,39 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>United States of Emoji</title>
+    <title>United Statemojis</title>
     <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; padding: 16px; text-align: center; }
-    svg text { font-size: 10px; font-family: avenir next, avenir, arial, sans-serif; }
+    html { font-family: -apple-system, BlinkMacSystemFont, arial, sans-serif; font-size: 14px; }
+    body { margin: 0; line-height: 1.5; }
+    svg { display: block; }
+    .container { padding: 16px; max-width: 750px; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .mt0 { margin-top: 0; }
+    .mb1 { margin-bottom: .5rem; }
+    .mr1 { margin-right: .5rem; }
+    .mb2 { margin-bottom: 1rem; }
+    .lh-12 { line-height: 1.2 }
+    .fs-12 { font-size: 12px; }
+    .measure { max-width: 32em; }
+    .black { color: #000; }
+    .border { border: 1px solid #eee; }
+    .rounded { border-radius: 5px; }
+    .center { text-align: center; }
+    .overflow-scroll { overflow: scroll; }
     </style>
   </head>
   <body>
-    <div id='viz'></div>
+    <div class='container mx-auto'>
+      <h1 class='mt0 mb1 lh-12'>United Statemojis of Twitter</h1>
+      <div class='mb1 measure'>
+        The map below displays the top four emojis, ranked by TF-IDF, for each US state (and DC) based on ~500,000 geolocated tweets with emojis during June 2017.
+      </div>
+      <div class='mb2 fs-12'>
+        <a href='https://twitter.com/brensudol' class='mr1 black'>Made by @brensudol</a>
+        <a href='https://github.com/brendansudol/emoji-usa' class='black'>Code on GitHub</a>
+      </div>
+      <div class='border rounded center overflow-scroll' id='viz'></div>
+    </div>
     <script src='//d3js.org/d3.v4.min.js'></script>
     <script src='main.js'></script>
   </body>

@@ -1,23 +1,27 @@
-const margin = 4
 const cellsWide = 12
 const cellsHigh = 8
-const labelHeight = 12
-const cellSize = 64
-const cellPad = 10
+const labelHeight = 14
+const cellSize = 62
+const cellPad = 8
 const cellInner = cellSize - cellPad
 const imgSize = (cellInner - labelHeight) / 2
 const imgPad = 1
 const imgInner = imgSize - 2 * imgPad
+const margin = { top: 14, right: 2, bottom: 8, left: 2 }
 
 const metric = 'tfidf'
-const width = cellsWide * cellSize + margin
-const height = cellsHigh * cellSize + margin
+const width = cellsWide * cellSize + margin.left + margin.right
+const height = cellsHigh * cellSize + margin.top + margin.bottom
 
-const svg = d3
-  .select('#viz')
+const viz = d3.select('#viz')
+
+const svg = viz
   .append('svg')
+  .attr('class', 'mx-auto')
   .attr('width', width)
   .attr('height', height)
+  .append('g')
+  .attr('transform', `translate(${margin.left + cellPad / 2}, ${margin.top})`)
 
 d3.json('../../data/state-stats.json', (error, data) => {
   const stateStats = {}
@@ -30,8 +34,6 @@ d3.json('../../data/state-stats.json', (error, data) => {
   })
 
   const state = svg
-    .append('g')
-    .attr('transform', `translate(${margin / 2}, ${margin / 2})`)
     .selectAll('.state')
     .data(data)
     .enter()
@@ -47,6 +49,7 @@ d3.json('../../data/state-stats.json', (error, data) => {
     .attr('x', cellInner / 2)
     .attr('y', cellInner - 2)
     .style('text-anchor', 'middle')
+    .style('font-size', 10)
     .text(d => d.name_short)
 
   const group = state
