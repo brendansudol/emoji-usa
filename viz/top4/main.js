@@ -7,15 +7,14 @@ const cellInner = cellSize - cellPad
 const imgSize = (cellInner - labelHeight) / 2
 const imgPad = 1
 const imgInner = imgSize - 2 * imgPad
-const margin = { top: 14, right: 2, bottom: 8, left: 2 }
+const margin = { top: 20, right: 2, bottom: 12, left: 2 }
 
 const metric = 'tfidf'
 const width = cellsWide * cellSize + margin.left + margin.right
 const height = cellsHigh * cellSize + margin.top + margin.bottom
 
-const viz = d3.select('#viz')
-
-const svg = viz
+const svg = d3
+  .select('#viz')
   .append('svg')
   .attr('class', 'mx-auto')
   .attr('width', width)
